@@ -48,7 +48,6 @@
             lblNyA.Size = new Size(107, 15);
             lblNyA.TabIndex = 0;
             lblNyA.Text = "Nombre y Apellido";
-            lblNyA.UseWaitCursor = true;
             // 
             // lblNombre
             // 
@@ -58,7 +57,6 @@
             lblNombre.Size = new Size(51, 15);
             lblNombre.TabIndex = 1;
             lblNombre.Text = "Nombre";
-            lblNombre.UseWaitCursor = true;
             // 
             // lblApellido
             // 
@@ -68,7 +66,6 @@
             lblApellido.Size = new Size(51, 15);
             lblApellido.TabIndex = 2;
             lblApellido.Text = "Apellido";
-            lblApellido.UseWaitCursor = true;
             // 
             // lblDni
             // 
@@ -78,7 +75,6 @@
             lblDni.Size = new Size(27, 15);
             lblDni.TabIndex = 3;
             lblDni.Text = "DNI";
-            lblDni.UseWaitCursor = true;
             // 
             // btnGuardar
             // 
@@ -88,7 +84,7 @@
             btnGuardar.TabIndex = 4;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
-            btnGuardar.UseWaitCursor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnEliminar
             // 
@@ -98,7 +94,7 @@
             btnEliminar.TabIndex = 5;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.UseWaitCursor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // lblModificar
             // 
@@ -109,7 +105,6 @@
             lblModificar.Size = new Size(58, 15);
             lblModificar.TabIndex = 6;
             lblModificar.Text = "modificar";
-            lblModificar.UseWaitCursor = true;
             // 
             // txtDni
             // 
@@ -117,7 +112,6 @@
             txtDni.Name = "txtDni";
             txtDni.Size = new Size(159, 23);
             txtDni.TabIndex = 7;
-            txtDni.UseWaitCursor = true;
             // 
             // txtNombre
             // 
@@ -125,7 +119,6 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(159, 23);
             txtNombre.TabIndex = 8;
-            txtNombre.UseWaitCursor = true;
             // 
             // txtApellido
             // 
@@ -133,7 +126,6 @@
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(159, 23);
             txtApellido.TabIndex = 9;
-            txtApellido.UseWaitCursor = true;
             // 
             // formulario_tp2
             // 
@@ -153,7 +145,6 @@
             Name = "formulario_tp2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Pequeño formulario";
-            UseWaitCursor = true;
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
