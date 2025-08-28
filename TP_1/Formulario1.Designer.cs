@@ -32,57 +32,61 @@
             bEliminar = new Button();
             txtNombre = new TextBox();
             txtApellido = new TextBox();
-            textBox1 = new TextBox();
+            txtDescripcion = new TextBox();
             lblNombre = new Label();
             lbl = new Label();
-            label2 = new Label();
+            lblDescripcion = new Label();
+            btnSalir = new Button();
             SuspendLayout();
             // 
             // bGuardar
             // 
-            bGuardar.Location = new Point(67, 160);
+            bGuardar.Location = new Point(48, 134);
             bGuardar.Name = "bGuardar";
-            bGuardar.Size = new Size(94, 35);
-            bGuardar.TabIndex = 0;
+            bGuardar.Size = new Size(100, 35);
+            bGuardar.TabIndex = 3;
             bGuardar.Text = "Guardar";
             bGuardar.UseVisualStyleBackColor = true;
-            bGuardar.Click += button1_Click;
+            bGuardar.Click += bGuardar_Click;
             // 
             // bEliminar
             // 
-            bEliminar.Location = new Point(167, 160);
+            bEliminar.Location = new Point(148, 134);
             bEliminar.Name = "bEliminar";
-            bEliminar.Size = new Size(94, 35);
-            bEliminar.TabIndex = 1;
+            bEliminar.Size = new Size(100, 35);
+            bEliminar.TabIndex = 4;
             bEliminar.Text = "Eliminar";
             bEliminar.UseVisualStyleBackColor = true;
+            bEliminar.Click += bEliminar_Click;
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(67, 65);
+            txtNombre.Location = new Point(48, 39);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(184, 23);
-            txtNombre.TabIndex = 2;
+            txtNombre.Size = new Size(190, 23);
+            txtNombre.TabIndex = 1;
+            txtNombre.KeyPress += txtNombre_KeyPress;
             // 
             // txtApellido
             // 
-            txtApellido.Location = new Point(67, 108);
+            txtApellido.Location = new Point(48, 82);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(184, 23);
-            txtApellido.TabIndex = 3;
+            txtApellido.Size = new Size(190, 23);
+            txtApellido.TabIndex = 2;
+            txtApellido.KeyPress += txtApellido_KeyPress;
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            textBox1.Location = new Point(283, 65);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(177, 130);
-            textBox1.TabIndex = 4;
+            txtDescripcion.Location = new Point(264, 39);
+            txtDescripcion.Multiline = true;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(183, 130);
+            txtDescripcion.TabIndex = 5;
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Location = new Point(67, 50);
+            lblNombre.Location = new Point(48, 24);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(51, 15);
             lblNombre.TabIndex = 5;
@@ -91,37 +95,52 @@
             // lbl
             // 
             lbl.AutoSize = true;
-            lbl.Location = new Point(67, 91);
+            lbl.Location = new Point(48, 65);
             lbl.Name = "lbl";
             lbl.Size = new Size(51, 15);
             lbl.TabIndex = 6;
             lbl.Text = "Apellido";
-            lbl.Click += lbl_Click;
             // 
-            // label2
+            // lblDescripcion
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(293, 47);
-            label2.Name = "label2";
-            label2.Size = new Size(69, 15);
-            label2.TabIndex = 7;
-            label2.Text = "Descripcion";
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.Location = new Point(274, 21);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(69, 15);
+            lblDescripcion.TabIndex = 7;
+            lblDescripcion.Text = "Descripcion";
+            // 
+            // btnSalir
+            // 
+            btnSalir.Location = new Point(372, 177);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 23);
+            btnSalir.TabIndex = 6;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // Formulario1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(484, 261);
-            Controls.Add(label2);
+            BackColor = SystemColors.ControlDark;
+            ClientSize = new Size(490, 212);
+            Controls.Add(btnSalir);
+            Controls.Add(lblDescripcion);
             Controls.Add(lbl);
             Controls.Add(lblNombre);
-            Controls.Add(textBox1);
+            Controls.Add(txtDescripcion);
             Controls.Add(txtApellido);
             Controls.Add(txtNombre);
             Controls.Add(bEliminar);
             Controls.Add(bGuardar);
+            KeyPreview = true;
             Name = "Formulario1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Mi primer forms";
+            Load += Formulario1_Load;
+            KeyDown += Formulario1_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -132,9 +151,10 @@
         private Button bEliminar;
         private TextBox txtNombre;
         private TextBox txtApellido;
-        private TextBox textBox1;
+        private TextBox txtDescripcion;
         private Label lblNombre;
         private Label lbl;
-        private Label label2;
+        private Label lblDescripcion;
+        private Button btnSalir;
     }
 }
